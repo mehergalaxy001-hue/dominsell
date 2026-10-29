@@ -10,7 +10,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'How much does watersort.in cost?',
     answer:
-      'The fixed Buy Now price is $800 USD (approximately ₹69,000 INR or €740 EUR). You can buy it immediately on Sedo.com or submit an offer.',
+      'The current limited-time Buy Now price is $800 USD (discounted 60% from its standard $2,000 valuation). The price is scheduled to increase to $2,000 USD in 6 months due to rising organic search traffic. You can buy it immediately on Sedo.com or submit an offer.',
   },
   {
     question: 'How is the payment and domain transfer protected?',

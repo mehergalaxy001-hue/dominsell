@@ -30,6 +30,7 @@ test('validateOffer rejects invalid numbers or below minimum', () => {
   const validOffer = validateOffer(800, 'USD', 'acquisitions@voodoo.io');
   assert.equal(validOffer.isValid, true);
   assert.equal(CURRENCIES.USD.buyNowPrice, 800);
+  assert.equal(CURRENCIES.USD.originalValuation, 2000);
 });
 
 test('convertAmount correctly converts between USD and INR', () => {

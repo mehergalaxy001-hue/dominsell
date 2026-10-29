@@ -100,18 +100,33 @@ Sedo Listing: ${sedoUrl}`;
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Left Column: Direct Buy Now Box */}
           <div className="md:col-span-5 bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">
-              Fixed Buy Now Price
-            </span>
-            <div className="flex items-baseline gap-2 mb-1">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                Current Buy Now Price
+              </span>
+              <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                Save $1,200 (60% Off)
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2.5 mb-1">
+              <span className="text-xl text-slate-400 line-through decoration-red-500 decoration-2 font-bold tabular-nums">
+                $2,000
+              </span>
+              <span className="text-slate-400 font-bold">→</span>
               <span className="text-3xl sm:text-4xl font-extrabold text-slate-900 tabular-nums">
                 $800
               </span>
-              <span className="text-slate-500 font-medium">USD</span>
+              <span className="text-blue-600 font-bold text-sm">USD</span>
             </div>
-            <p className="text-xs text-slate-500 mb-6">
+
+            <p className="text-xs text-slate-500 mb-3">
               Approx. ₹69,000 INR · €740 EUR
             </p>
+
+            <div className="mb-4 p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-[11px] text-amber-800 leading-snug">
+              <strong>Price Alert:</strong> Price will be updated to <strong>$2,000 USD</strong> in 6 months. Lock in $800 today on Sedo.
+            </div>
 
             <a
               href={sedoUrl}

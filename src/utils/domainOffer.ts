@@ -4,7 +4,8 @@ export interface CurrencyConfig {
   code: CurrencyCode;
   symbol: string;
   rateToUSD: number;
-  buyNowPrice: number;
+  originalValuation: number; // Regular/future valuation ($2000 USD)
+  buyNowPrice: number;       // Current limited-time offer ($800 USD)
   minOffer: number;
 }
 
@@ -13,6 +14,7 @@ export const CURRENCIES: Record<CurrencyCode, CurrencyConfig> = {
     code: 'USD',
     symbol: '$',
     rateToUSD: 1,
+    originalValuation: 2000,
     buyNowPrice: 800,
     minOffer: 350,
   },
@@ -20,6 +22,7 @@ export const CURRENCIES: Record<CurrencyCode, CurrencyConfig> = {
     code: 'INR',
     symbol: '₹',
     rateToUSD: 0.0116, // approx 1 USD = 86.2 INR
+    originalValuation: 172000,
     buyNowPrice: 69000,
     minOffer: 30000,
   },
@@ -27,6 +30,7 @@ export const CURRENCIES: Record<CurrencyCode, CurrencyConfig> = {
     code: 'EUR',
     symbol: '€',
     rateToUSD: 1.08,
+    originalValuation: 1850,
     buyNowPrice: 740,
     minOffer: 325,
   },
