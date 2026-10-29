@@ -11,6 +11,7 @@ import {
 import { sounds } from '../utils/soundEffects';
 import { Volume2, VolumeX, RotateCcw, CheckCircle2, ArrowRight } from 'lucide-react';
 import { getSedoListingUrl } from '../utils/domainOffer';
+import { AdsterraSkyscraper } from './AdsterraAds';
 
 export function WaterSortDemo() {
   const [tubes, setTubes] = useState<Tube[]>(createInitialPuzzle);
@@ -80,7 +81,7 @@ export function WaterSortDemo() {
 
   return (
     <section id="demo" className="py-16 bg-white border-b border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-8">
           <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider block mb-1">
             Interactive Test
@@ -93,8 +94,10 @@ export function WaterSortDemo() {
           </p>
         </div>
 
-        {/* Puzzle Box */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xs relative">
+        {/* Puzzle and Skyscraper Flex Wrapper */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
+          {/* Puzzle Box */}
+          <div className="flex-1 w-full bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xs relative">
           {/* Controls */}
           <div className="flex items-center justify-between gap-4 pb-4 border-b border-slate-200 text-xs sm:text-sm">
             <div className="flex items-center gap-3 text-slate-600">
@@ -226,6 +229,12 @@ export function WaterSortDemo() {
               </div>
             </div>
           )}
+          </div>
+
+          {/* Adsterra 160x300 Skyscraper Slot */}
+          <div className="hidden lg:flex flex-col items-center justify-center bg-slate-50 border border-slate-200 rounded-2xl p-4 shadow-xs shrink-0 w-[190px]">
+            <AdsterraSkyscraper />
+          </div>
         </div>
       </div>
     </section>

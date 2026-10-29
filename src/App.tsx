@@ -6,6 +6,11 @@ import { SedoEscrowTimeline } from './components/SedoEscrowTimeline';
 import { OfferCalculatorDesk } from './components/OfferCalculatorDesk';
 import { DomainFAQ } from './components/DomainFAQ';
 import { Footer } from './components/Footer';
+import {
+  AdsterraLeaderboard,
+  AdsterraDirectLinkBanner,
+  AdsterraNativeBanner,
+} from './components/AdsterraAds';
 
 export default function App() {
   const scrollToContact = () => {
@@ -30,11 +35,25 @@ export default function App() {
           onScrollToContact={scrollToContact}
           onScrollToDemo={scrollToDemo}
         />
+        {/* Adsterra 728x90 Top Leaderboard */}
+        <AdsterraLeaderboard />
+
         <MarketValueBento />
         <WaterSortDemo />
+
+        {/* Adsterra Direct Smart Link */}
+        <AdsterraDirectLinkBanner />
+
         <SedoEscrowTimeline />
+
+        {/* Adsterra Native Responsive Banner Widget */}
+        <AdsterraNativeBanner />
+
         <OfferCalculatorDesk />
         <DomainFAQ />
+
+        {/* Adsterra 728x90 Bottom Leaderboard */}
+        <AdsterraLeaderboard />
       </main>
       <Footer />
     </div>

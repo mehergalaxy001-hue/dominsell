@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { AdsterraWideSkyscraper } from './AdsterraAds';
 
 interface FAQItem {
   question: string;
@@ -43,7 +44,7 @@ export function DomainFAQ() {
 
   return (
     <section id="faq" className="py-16 bg-white border-b border-slate-200">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
             Frequently Asked Questions
@@ -53,35 +54,43 @@ export function DomainFAQ() {
           </p>
         </div>
 
-        <div className="space-y-3">
-          {FAQS.map((faq, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div
-                key={idx}
-                className="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden transition-colors"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggle(idx)}
-                  className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-slate-900 text-sm sm:text-base focus:outline-none"
-                  aria-expanded={isOpen}
+        <div className="flex flex-col lg:flex-row items-start justify-center gap-8">
+          {/* FAQ Accordion */}
+          <div className="flex-1 w-full space-y-3">
+            {FAQS.map((faq, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden transition-colors"
                 >
-                  <span>{faq.question}</span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-blue-600' : ''
-                    }`}
-                  />
-                </button>
-                {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 bg-white">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  <button
+                    type="button"
+                    onClick={() => toggle(idx)}
+                    className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-semibold text-slate-900 text-sm sm:text-base focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span>{faq.question}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-blue-600' : ''
+                      }`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 pb-5 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-200/60 bg-white">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Adsterra 160x600 Wide Skyscraper Slot */}
+          <div className="hidden lg:flex flex-col items-center justify-center bg-slate-50 border border-slate-200 rounded-2xl p-4 shadow-xs shrink-0 w-[190px]">
+            <AdsterraWideSkyscraper />
+          </div>
         </div>
       </div>
     </section>
